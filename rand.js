@@ -1,4 +1,5 @@
 var pickButton;
+var pairButton;
 var header;
 var body;
 var choice;
@@ -68,10 +69,14 @@ document.addEventListener('DOMContentLoaded', () => {
   body = document.getElementById('body');
   header = document.getElementById('header');
   pickButton = document.getElementById('pickButton');
+  pairButton = document.getElementById('pairButton');
+  
   choice = document.getElementById('choice');
   aList = document.getElementById('aList');
 
   pickButton.addEventListener('click', pickOnClick );
+  pairButton.addEventListener('click', pairClick );
+  
   aList.addEventListener('click', aListOnClick );
 
   // build the attendance list
@@ -100,6 +105,25 @@ var pickOnClick = function (event) {
     
       // return;
       
+    }  
+    if (colors[cur]) header.style.color = colors[cur];
+    if (colors[cur-1]) body.style.backgroundColor = colors[cur-1];
+    cur += 1;
+  }, 200);
+}
+
+
+var pairClick = function (event) {
+  choice.innerHTML = '&nbsp;'
+  var rand = students.splice(Math.floor(Math.random() * students.length),1); 
+  var randTwo = students.splice(Math.floor(Math.random() * students.length),1);
+
+  var x = window.setInterval(() => {
+    if (colors[cur] === undefined) {
+      window.clearInterval(x);
+      cur = 0;
+      choice.innerHTML = rand + " " + randTwo;
+      // return;  
     }  
     if (colors[cur]) header.style.color = colors[cur];
     if (colors[cur-1]) body.style.backgroundColor = colors[cur-1];
