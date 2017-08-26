@@ -122,7 +122,7 @@ var pairClick = function (event) {
     if (colors[cur] === undefined) {
       window.clearInterval(x);
       cur = 0;
-      choice.innerHTML = rand + " " + randTwo;
+      choice.innerHTML = rand + ' &hearts; ' + randTwo
       // return;  
     }  
     if (colors[cur]) header.style.color = colors[cur];
