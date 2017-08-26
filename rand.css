@@ -4,7 +4,7 @@ html {
 }
 
 body {
-  font-size: 24px;
+  font-size: 24px; color:#aa0f54;
   width: 25em;
   margin: 0 auto;
   padding: 0.5em 0;
@@ -12,7 +12,7 @@ body {
   height: 100vh;
 
   font-family: palatino;
-  background-color: lightcoral;
+  background-color:yellow;
   text-align: center;
 }
 
@@ -20,12 +20,16 @@ ul {
   list-style-type: none;
 }
 
-button {
-  font-size: 24px;
+button { 
+  background-color: black;
+  font-size: 24px; color:white;
   font-family: palatino;
+
+ 
 }
 
 
-img {
-  max-width: 60%;
+
+.img-circle {
+  border-radius: 50%;
 }
