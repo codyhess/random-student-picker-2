@@ -12,13 +12,17 @@ body {
   height: 100vh;
 
   font-family: palatino;
-  background-color: lightcoral;
+  background-color: darkblue;
   text-align: center;
 }
 
 button {
   font-size: 24px;
   font-family: palatino;
+}
+li {
+  background-color: lightblue;
+  text-color:darkblue;
 }
 
 img {
