@@ -94,9 +94,9 @@ var pickOnClick = function (event) {
       window.clearInterval(x);
       cur = 0;
       if (rand[0].length % 2 === 0) {
-        rand[0] = rand[0] + ' !'
+        rand[0] = rand[0] 
       }
-      choice.innerText = rand[0].toUpperCase() + ' ' + title;
+      choice.innerText = (rand[0] + ' ' + title).toUpperCase() + '!'
     
       // return;
       
