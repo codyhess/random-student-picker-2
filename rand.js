@@ -24,10 +24,10 @@ var students = [
   "Shonica",
   "Krystal"
 ];
-var titles = [
+var titles = [ //random titles because I'm unable to remember everyone's
   "The Giver",
   "The Destroyer",
-  "The Evil One",
+  "The Just and Magnificent",
   "The DragonSlayer",
   "The Queen Of Dragons",
   "The Silent One",
@@ -40,7 +40,7 @@ var titles = [
   "The Gift Wrapper",
   "The Indecisive",
   "The Jazz Guitarist",
-  "The One Who Writes Titles"
+  "The Creative Coder"
 ];
 
 
@@ -96,6 +96,7 @@ var pickOnClick = function (event) {
   var title = titles.splice(Math.floor(Math.random() * titles.length), 1);
   var x = window.setInterval(() => {
     if (colors[cur] === undefined) {
+      body.style.backgroundColor = 'goldenrod;'
       window.clearInterval(x);
       cur = 0;
       if (rand[0].length % 2 === 0) {
@@ -122,7 +123,7 @@ var pairClick = function (event) {
     if (colors[cur] === undefined) {
       window.clearInterval(x);
       cur = 0;
-      choice.innerHTML = rand + ' &hearts; ' + randTwo
+      choice.innerHTML = rand + ' &#x2764; ' + randTwo
       // return;  
     }  
     if (colors[cur]) header.style.color = colors[cur];
@@ -137,4 +138,5 @@ var aListOnClick = function (event) {
     event.target.style.textDecoration = 'line-through';
   }
 }
+
 
